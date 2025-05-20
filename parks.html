@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wild America | Parks</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/parks.css">
+</head>
+<body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono&display=swap">
+    <div class="parallax-container">
+        <!-- Боковое меню -->
+        <nav class="vertical-nav">
+            <ul>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="History.html">History</a></li>
+                <li><a href="parks.html" >Parks</a></li>
+                <li><a href="photos.html">Photo</a></li>
+            </ul>
+        </nav>
+    <!-- Шапка с навигацией -->
+    <header class="archive-header">
+        <div class="header-content">
+            <h1>National Parks of the USA</h1>
+        </div>
+    </header>
+
+    <!-- Основной контент -->
+    <main class="parks-container">
+        <!-- Фильтры -->
+        <section class="filters-section">
+            <div class="filter-group">
+                <label for="region-filter">Region:</label>
+                <select id="region-filter">
+                    <option value="all">All</option>
+                    <option value="west">West</option>
+                    <option value="east">East</option>
+                    <option value="alaska">Alaska</option>
+                </select>
+                <label for="year-filter">Year of foundation:</label>
+    <input type="range" id="year-filter" min="1872" max="2020" value="2020">
+    <span id="year-value">1872-2020</span>
+            </div>
+            <!-- В parks.html, внутри section class="filters-section" -->
+<div class="filter-group">
+    <label for="type-filter">Type:</label>
+    <select id="type-filter">
+        <option value="all">All</option>
+        <option value="mountains">Mountains</option>
+        <option value="canyon">The canyons</option>
+        <option value="desert">Deserts</option>
+        <option value="wetlands">The swamps</option>
+        <option value="coast">Coast</option>
+    </select>
+
+        </section>
+
+        <!-- Карточки парков -->
+        <section class="parks-grid" id="parks-grid">
+            <!-- Йеллоустон -->
+            <article class="park-card" data-region="west" data-year="1872" data-type="mountains">
+                <div class="card-header">
+                    <h2>Yellowstone</h2>
+                    <span class="park-year">1872</span>
+                </div>
+                <div class="card-image" style="background-image: url('images/parks/yellowstone.jpeg')">
+                    <div class="park-badge">The first in the world</div>
+                </div>
+                <div class="card-content">
+                    <p><strong>The State:</strong> Wyoming, Montana, Idaho</p>
+                    <p><strong>Square:</strong> 8 991 km²</p>
+                    <p>The first national park in the world, famous for geysers and megafauna.</p>
+                    <button class="archive-button" >Open the dossier</button>
+                </div>
+            </article>
+<!-- Йосемити -->
+    <article class="park-card" data-region="west" data-year="1890" data-type="mountains">
+        <div class="card-header">
+            <h2>Yosemite</h2>
+            <span class="park-year">1890</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/yosemite.jpg')">
+            <div class="park-badge">World Heritage</div>
+        </div>
+        <div class="card-content">
+            <p><strong>The State:</strong> California</p>
+            <p><strong>Square:</strong> 3 074 km²</p>
+            <p>It is famous for granite cliffs, waterfalls and ancient redwoods.</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+            <!-- Гранд-Каньон -->
+            <article class="park-card" data-region="west" data-year="1919" data-type="canyon">
+                <div class="card-header">
+                    <h2>The Grand Canyon</h2>
+                    <span class="park-year">1919</span>
+                </div>
+                <div class="card-image" style="background-image: url('images/parks/grand-canyon.jpg')"></div>
+                <div class="card-content">
+                    <p><strong>The State:</strong> Arizona</p>
+                    <p><strong>Square:</strong> 4 926 km²</p>
+                    <p>The grand gorge of the Colorado River is up to 1800 meters deep.</p>
+                    <button class="archive-button">Open the dossier</button>
+                </div>
+            </article>
+
+             
+
+    <!-- Долина Смерти -->
+    <article class="park-card" data-region="west" data-year="1994" data-type="desert">
+        <div class="card-header">
+            <h2>Death Valley</h2>
+            <span class="park-year">1994</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/death-valley.jpg')">
+            <div class="park-badge">The hottest</div>
+        </div>
+        <div class="card-content">
+            <p><strong>The State:</strong> California, Nevada</p>
+            <p><strong>Square:</strong> 13 650 km²</p>
+            <p>The hottest place in North America (+56.7°C record).</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+
+    <!-- Роки-Маунтин -->
+    <article class="park-card" data-region="west" data-year="1915" data-type="mountains">
+        <div class="card-header">
+            <h2>Rocky Mountain</h2>
+            <span class="park-year">1915</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/rocky-mountain.jpg')"></div>
+        <div class="card-content">
+            <p><strong>The State:</strong> Colorado</p>
+            <p><strong>Square:</strong> 1 076 km²</p>
+            <p>A mountain park with heights up to 4,346 m and alpine meadows.</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+
+    <!-- Глейшер -->
+    <article class="park-card" data-region="west" data-year="1910" data-type="mountains">
+        <div class="card-header">
+            <h2>Glacier</h2>
+            <span class="park-year">1910</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/glacier.jpg')">
+            <div class="park-badge">Glaciers</div>
+        </div>
+        <div class="card-content">
+            <p><strong>The State:</strong> Montana</p>
+            <p><strong>Square:</strong> 4 101 km²</p>
+            <p>It is known for glaciers, crystal clear lakes and rich fauna.</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+
+    <!-- Зайон -->
+    <article class="park-card" data-region="west" data-year="1919" data-type="canyon">
+        <div class="card-header">
+            <h2>Zion</h2>
+            <span class="park-year">1919</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/zion.jpg')"></div>
+        <div class="card-content">
+            <p><strong>The State:</strong> Utah</p>
+            <p><strong>Square:</strong> 593 km²</p>
+            <p>The red cliffs of the canyon are up to 900 meters high and the Virginia River.</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+
+    <!-- Арки -->
+    <article class="park-card" data-region="west" data-year="1971" data-type="desert">
+        <div class="card-header">
+            <h2>Arches</h2>
+            <span class="park-year">1971</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/arches.jpg')">
+            <div class="park-badge">2000+ arches</div>
+        </div>
+        <div class="card-content">
+            <p><strong>The State:</strong> Utah</p>
+            <p><strong>Square:</strong> 310 km²</p>
+            <p>More than 2000 natural stone arches made of sandstone.</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+
+    <!-- Эверглейдс -->
+    <article class="park-card" data-region="east" data-year="1947" data-type="wetlands">
+        <div class="card-header">
+            <h2>The Everglades</h2>
+            <span class="park-year">1947</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/everglades.jpg')">
+            <div class="park-badge">The swamps</div>
+        </div>
+        <div class="card-content">
+            <p><strong>The State:</strong> Florida</p>
+            <p><strong>Square:</strong> 6 105 km²</p>
+            <p>Tropical swamps with alligators and rare birds.</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+
+    <!-- Акадия -->
+    <article class="park-card" data-region="east" data-year="1919" data-type="coast">
+        <div class="card-header">
+            <h2>Acadia</h2>
+            <span class="park-year">1919</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/acadia.jpg')">
+            <div class="park-badge">The First East</div>
+        </div>
+        <div class="card-content">
+            <p><strong>The State:</strong> Maine</p>
+            <p><strong>Square:</strong> 198 km²</p>
+            <p>The rocky Atlantic coast with picturesque landscapes.</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+
+    <!-- Денали -->
+    <article class="park-card" data-region="alaska" data-year="1917" data-type="mountains">
+        <div class="card-header">
+            <h2>Denali</h2>
+            <span class="park-year">1917</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/denali.jpg')">
+            <div class="park-badge">The highest peak</div>
+        </div>
+        <div class="card-content">
+            <p><strong>The State:</strong> Alaska</p>
+            <p><strong>Square:</strong> 19 186 km²</p>
+            <p>Гора Денали (6190 м) - высочайшая вершина Северной Америки.</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+
+    <!-- Нью-Ривер-Гордж -->
+    <article class="park-card" data-region="east" data-year="2020" data-type="canyon">
+        <div class="card-header">
+            <h2>New River Gorge</h2>
+            <span class="park-year">2020</span>
+        </div>
+        <div class="card-image" style="background-image: url('images/parks/new-river.jpg')">
+            <div class="park-badge">New Park</div>
+        </div>
+        <div class="card-content">
+            <p><strong>The State:</strong> West Virginia</p>
+            <p><strong>Square:</strong> 28 km²</p>
+            <p>The youngest park with a deep canyon and the New River.</p>
+            <button class="archive-button">Open the dossier</button>
+        </div>
+    </article>
+
+            <!-- Другие парки по аналогии -->
+        </section>
+
+        <!-- Карта парков -->
+        <section class="map-section">
+            <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css">
+
+            <h2>Geographical location</h2>
+            <div class="archive-map" id="park-map"></div>
+            <div class="map-legend">
+                <div class="legend-item"><span class="icon first"></span> The first parks (before 1900)</div>
+                <div class="legend-item"><span class="icon modern"></span> Modern parks</div>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/parks.js"></script>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+</body>
+</html>

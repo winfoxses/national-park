@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Parks of the USA</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto+Mono&display=swap">
+    <!-- Preloader -->
+    <div class="loader">
+        <div class="loader-circle"></div>
+    </div>
+
+    <!-- Главный контейнер с параллаксом -->
+    <div class="parallax-container">
+        <!-- Боковое меню -->
+        <nav class="vertical-nav">
+            <ul>
+                <li><a href="index.html">Main</a></li>
+                <li><a href="History.html">History</a></li>
+                <li><a href="parks.html" >Parks</a></li>
+                <li><a href="photos.html">Photo</a></li>
+            </ul>
+        </nav>
+
+        <!-- Контент -->
+        <main>
+            <section class="hero">
+                <h1 class="animate__animated animate__fadeInUp">
+                    <span class="title-word" style="--delay: 0.1s">Wild</span>
+                    <span class="title-word" style="--delay: 0.3s">America</span>
+                </h1>
+                <p class="subtitle animate__animated animate__fadeInUp animate__delay-1s">National Parks of the USA</p>
+                <div class="scroll-hint animate__animated animate__bounce animate__infinite">
+                    <div class="mouse"></div>
+                </div>
+            </section>
+             <section class="intro">
+        <div class="intro-content">
+            <h3 class="intro-title">Historical Archive of National Parks</h3>
+            <p class="intro-text">
+                The national parks of the USA represent a unique phenomenon in the world practice of preserving natural heritage. 
+                This project documents the key stages of their formation since 1832, when the first protected areas were created., 
+                up to modern initiatives to protect biodiversity.
+            </p>
+            <p class="intro-text">
+                Our archive contains historical materials reflecting the evolution of the legislative framework, changes in the boundaries of parks, as well as scientific research of their ecosystems. Special attention is paid to the role of individuals, from the presidents of the United States to the rank-and-file rangers, whose work made it possible to preserve these territories.
+            </p>
+            <p class="intro-text">
+                The materials are organized chronologically with the possibility of filtering by geographical regions 
+                and the types of natural objects.
+            </p>
+        </div>
+    </section>
+     <section class="team-section">
+        <h3 class="team-title">The project team</h3>
+        <div class="team-members">
+            <!-- Первый участник -->
+            <div class="team-member">
+                <div class="member-photo" style="background-image: url('photos/egor.jpg');"></div>
+                <h4 class="member-name">Rekeev Egor</h4>
+                <p class="member-role">Chief Editor</p>
+            </div>
+            
+            <!-- Второй участник -->
+            <div class="team-member">
+                <div class="member-photo" style="background-image: url('photos/darya.jpg');"></div>
+                <h4 class="member-name">Kavadina Daria</h4>
+                <p class="member-role">Assistant Editor</p>
+            </div>
+        </div>
+    </section>
+        </main>
+
+        <!-- Фоновые слои для параллакса -->
+        <div class="parallax-layer layer-1" data-speed="0.1"></div>
+        <div class="parallax-layer layer-2" data-speed="0.3"></div>
+        <div class="parallax-layer layer-3" data-speed="0.5"></div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
