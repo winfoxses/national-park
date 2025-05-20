@@ -1,0 +1,337 @@
+/* Тёмная архивная тема */
+:root {
+    --archive-bg: #121212;
+    --archive-paper: #1e1e1e;
+    --archive-ink: #e0d6c2;
+    --accent-gold: #c9a66b;
+    --document-border: #3a3226;
+    --text: #e0d6c2; /* Добавляем */
+    --accent: #c9a66b; /* Добавляем */
+}
+/* Вертикальное меню */
+.vertical-nav {
+    position: fixed;
+    right: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 100;
+}
+.vertical-nav a {
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: block;
+    margin: 1rem 0;
+    position: relative;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+.vertical-nav a:hover {
+    opacity: 1;
+}
+.vertical-nav a::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--accent);
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.vertical-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* Общие стили */
+body {
+    font-family: 'Playfair Display', serif;
+    background: var(--archive-bg);
+    color: var(--archive-ink);
+    line-height: 1.8;
+    padding: 0;
+    margin: 0;
+}
+
+/* Шапка */
+.archive-header {
+    text-align: center;
+    margin-bottom: 4rem;
+    position: relative;
+    background: transparent !important;
+    border-bottom: none !important;
+    padding: 2rem 0 !important;
+}
+
+.archive-header h1 {
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin: 0.5rem 0;
+    color: var(--accent-gold);
+}
+
+.archive-stamp {
+    font-family: 'Roboto Mono', monospace;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Навигация парков */
+.park-nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 0;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.park-nav a {
+    color: var(--archive-ink);
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    position: relative;
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+.park-nav a:hover {
+    opacity: 1;
+}
+
+.park-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -3px;
+    left: 0;
+    background: var(--accent-gold);
+    transition: width 0.3s;
+}
+
+.park-nav a:hover::after {
+    width: 100%;
+}
+
+/* Контейнер */
+.parks-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Фильтры */
+.filters-section {
+    background: var(--archive-paper);
+    padding: 2rem;
+    margin-bottom: 3rem;
+    border-left: 3px solid var(--accent-gold);
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-group label {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.9rem;
+}
+
+.filter-group select, .filter-group input {
+    background: var(--archive-bg);
+    color: var(--archive-ink);
+    border: 1px solid var(--document-border);
+    padding: 0.5rem;
+    font-family: 'Playfair Display', serif;
+}
+
+.filter-group input[type="range"] {
+    width: 200px;
+}
+
+/* Карточки парков */
+.parks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.park-card {
+    background: var(--archive-paper);
+    border: 1px solid var(--document-border);
+    transition: all 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.park-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--document-border);
+}
+
+.card-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: var(--accent-gold);
+    font-weight: 700;
+}
+
+.park-year {
+    font-family: 'Roboto Mono', monospace;
+    background: var(--archive-bg);
+    color: var(--accent-gold);
+    padding: 0.3rem 0.7rem;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.card-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-bottom: 1px solid var(--document-border);
+}
+
+.park-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: var(--accent-gold);
+    color: var(--archive-bg);
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.card-content p {
+    margin: 0.5rem 0;
+    font-size: 0.95rem;
+}
+
+.card-content strong {
+    color: var(--accent-gold);
+}
+
+.archive-button {
+    background: transparent;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-family: 'Roboto Mono', monospace;
+    width: 100%;
+}
+
+.archive-button:hover {
+    background: rgba(201, 166, 107, 0.1);
+}
+
+/* Карта */
+.map-section {
+    margin-top: 4rem;
+}
+
+.archive-map {
+    height: 500px;
+    background: var(--archive-paper);
+    border: 1px solid var(--document-border);
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.map-legend {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+}
+
+.icon.first {
+    background: var(--accent-gold);
+}
+
+.icon.modern {
+    background: #7a7a7a;
+}
+/* В parks.css добавить */
+@media (max-width: 768px) {
+    .parks-container {
+        padding: 1rem;
+    }
+    
+    .filters-section {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    .filter-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .parks-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .park-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .map-section {
+        margin-top: 2rem;
+    }
+    
+    .archive-map {
+        height: 300px;
+    }
+    
+    .map-legend {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
