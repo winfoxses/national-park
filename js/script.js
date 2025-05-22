@@ -45,30 +45,3 @@ window.addEventListener('scroll', () => {
         }
     });
 });
-// Мобильное меню
-document.addEventListener('DOMContentLoaded', () => {
-    const menuBtn = document.createElement('button');
-    menuBtn.className = 'mobile-menu-btn';
-    menuBtn.innerHTML = '☰';
-    document.body.appendChild(menuBtn);
-    
-    const nav = document.querySelector('.vertical-nav');
-    
-    menuBtn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
-    
-    // Закрытие меню при клике на ссылку
-    document.querySelectorAll('.vertical-nav a').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-        });
-    });
-    
-    // Закрытие меню при клике вне его
-    document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && e.target !== menuBtn) {
-            nav.classList.remove('active');
-        }
-    });
-});
